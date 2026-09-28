@@ -1,0 +1,20 @@
+{
+  "jira": {
+    "issue_type": "Task",
+    "key": "DEVOPS-888",
+    "summary": "Provision AKS cluster for Voice Catalyst workloads in QA",
+    "status": "In Progress",
+    "priority": "High",
+    "reporter": "Reporter-888",
+    "assignee": "Unassigned",
+    "labels": [
+      "devops",
+      "iac",
+      "containers"
+    ],
+    "created": "2026-09-18T09:20:00Z",
+    "updated": "2026-09-18T09:20:00Z",
+    "url": "https://jira.honeywell.com/browse/DEVOPS-888",
+    "description": "Please provision an AKS cluster for the Voice Catalyst workloads in QA. Environment: qa. Resource prefix: voicecatalyst-aks. aks_version: 1.30.3, sku_tier: Standard, identity_type: SystemAssigned, admin_username: azureuser. The SSH public key is held in the pipeline variable AKS_SSH_PUBLIC_KEY. Private cluster is required. Target service repo is pss_fabric_app_iac_sample."
+  }
+}

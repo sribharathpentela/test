@@ -1,0 +1,20 @@
+{
+    "jira": {
+        "issue_type": "Task",
+        "key": "DEVOPS-555",
+        "summary": "Create Chroma db for asset-management service",
+        "status": "Open",
+        "priority": "Medium",
+        "reporter": "Reporter-555",
+        "assignee": "Unassigned",
+        "labels": [
+            "devops",
+            "iac",
+            "storage"
+        ],
+        "created": "2026-09-04T11:30:00Z",
+        "updated": "2026-09-04T11:30:00Z",
+        "url": "https://jira.honeywell.com/browse/DEVOPS-555",
+        "description": "Need a new Chroma DB for asset-management service in QA evironment. Target service repo: pss_fabric_asset_management_service_iac_sample"
+    }
+}

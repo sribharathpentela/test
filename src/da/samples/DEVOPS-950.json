@@ -1,0 +1,20 @@
+{
+  "jira": {
+    "issue_type": "Task",
+    "key": "DEVOPS-950",
+    "summary": "Increase CPU request for cf-app-registration in DEV",
+    "status": "In Progress",
+    "priority": "Medium",
+    "reporter": "Reporter-950",
+    "assignee": "Unassigned",
+    "labels": [
+      "devops",
+      "config-change",
+      "kubernetes"
+    ],
+    "created": "2026-09-26T09:00:00Z",
+    "updated": "2026-09-26T09:00:00Z",
+    "url": "https://jira.honeywell.com/browse/DEVOPS-950",
+    "description": "The cf-app-registration pods are throttling under load in dev. Please raise the CPU request to 300m. Environment: dev."
+  }
+}

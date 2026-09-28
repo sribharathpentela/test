@@ -1,0 +1,20 @@
+{
+  "jira": {
+    "issue_type": "Task",
+    "key": "DEVOPS-222",
+    "summary": "Create Azure Storage Account for Analytics Service in QA",
+    "status": "Open",
+    "priority": "Medium",
+    "reporter": "Reporter-222",
+    "assignee": "Unassigned",
+    "labels": [
+      "devops",
+      "iac",
+      "storage"
+    ],
+    "created": "2026-09-04T11:30:00Z",
+    "updated": "2026-09-04T11:30:00Z",
+    "url": "https://jira.honeywell.com/browse/DEVOPS-222",
+    "description": "Need a new Azure Storage Account created for the analytics service in QA evironment. Target service repo: pss_fabric_app_iac_sample. Environment: qa. Account tier should be Standard, account_replication_type: LRS, container_name: analytics-blobs."
+  }
+}

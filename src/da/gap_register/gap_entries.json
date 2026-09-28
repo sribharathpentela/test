@@ -1,0 +1,499 @@
+[
+  {
+    "ticket_id": "DEVOPS-111",
+    "requested_resource_type": "PostgreSQL-Flexible-Server",
+    "environment": "dev",
+    "reason": "Requested resource_type 'PostgreSQL-Flexible-Server' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample'.",
+    "timestamp": "2026-09-07T12:08:00.640472Z"
+  },
+  {
+    "ticket_id": "DEVOPS-999",
+    "requested_resource_type": "Quantum-Database",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Quantum-Database' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample'.",
+    "timestamp": "2026-09-07T12:08:02.076405Z"
+  },
+  {
+    "ticket_id": "DEVOPS-999",
+    "requested_resource_type": "Quantum-Database",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Quantum-Database' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample'.",
+    "timestamp": "2026-09-07T12:09:59.314089Z"
+  },
+  {
+    "ticket_id": "DEVOPS-555",
+    "requested_resource_type": "chroma_db",
+    "environment": "qa",
+    "reason": "Requested resource_type 'chroma_db' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample'.",
+    "timestamp": "2026-09-07T13:29:29.954142Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "AKS",
+    "environment": "dev",
+    "reason": "Requested resource_type 'AKS' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T07:49:17.106549Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T09:35:23.922657Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T09:35:42.441963Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T09:43:04.592232Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T09:43:36.839210Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T09:50:12.910756Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T12:14:25.888075Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T12:22:40.534169Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T12:33:15.572766Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-21T12:38:01.865434Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-23T10:03:35.551381Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-23T10:04:00.182898Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-23T10:18:38.441614Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-23T10:26:01.056918Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T05:27:09.866278Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T06:31:26.972819Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T06:56:34.744101Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T07:07:38.336053Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T07:08:48.299254Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T07:21:29.164949Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T07:23:13.164548Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T07:24:05.712455Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T07:44:51.410520Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T07:46:12.985419Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T08:03:55.277912Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T08:07:18.684513Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T08:09:37.968765Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T08:11:02.483312Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T08:25:33.163756Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T08:30:23.533023Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T08:41:37.640700Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T08:42:34.840002Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T08:43:17.302864Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T09:01:23.299361Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T09:02:41.918434Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T09:05:07.344146Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T09:05:45.702981Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:26:12.385903Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:28:04.009523Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:29:29.791144Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:31:33.477586Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:32:50.236578Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:34:27.122512Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:48:28.414287Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:49:22.346114Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:51:34.303737Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:52:18.598974Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:53:27.810039Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T10:59:28.743113Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T11:01:45.396511Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T11:04:23.404139Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T12:04:30.468211Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T12:05:36.128195Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T12:18:21.071785Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T12:21:07.053344Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T12:22:54.602517Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T12:23:40.219382Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T12:24:18.206626Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T12:27:35.416382Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-26T12:35:51.530821Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-28T05:37:33.866757Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-28T06:07:33.483339Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-28T06:11:37.147648Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-28T06:14:00.226149Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-28T06:15:36.181883Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-28T06:17:06.495684Z"
+  },
+  {
+    "ticket_id": "UNKNOWN",
+    "requested_resource_type": "Cosmos-DB",
+    "environment": "dev",
+    "reason": "Requested resource_type 'Cosmos-DB' was not found in Central Template Registry 'pss_fabric_azure_modules_iac_sample' at pinned ref 'v1.0.6'.",
+    "timestamp": "2026-09-28T06:18:50.747972Z"
+  }
+]

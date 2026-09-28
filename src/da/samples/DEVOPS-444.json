@@ -1,0 +1,20 @@
+{
+    "jira": {
+        "issue_type": "Task",
+        "key": "DEVOPS-444",
+        "summary": "Provision of new git hub repository for my application code",
+        "status": "In Progress",
+        "priority": "High",
+        "reporter": "Reporter-333",
+        "assignee": "Unassigned",
+        "labels": [
+            "devops",
+            "iac",
+            "networking"
+        ],
+        "created": "2026-09-04T14:15:00Z",
+        "updated": "2026-09-04T14:15:00Z",
+        "url": "https://jira.honeywell.com/browse/DEVOPS-333",
+        "description": "Request to provision an new Git hub repository for my application code for th Full stack web application"
+    }
+}

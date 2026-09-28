@@ -1,0 +1,20 @@
+{
+  "jira": {
+    "issue_type": "Task",
+    "key": "DEVOPS-333",
+    "summary": "Provision Azure Load Balancer for Ingress Gateway in STAGING",
+    "status": "In Progress",
+    "priority": "High",
+    "reporter": "Reporter-333",
+    "assignee": "Unassigned",
+    "labels": [
+      "devops",
+      "iac",
+      "networking"
+    ],
+    "created": "2026-09-04T14:15:00Z",
+    "updated": "2026-09-04T14:15:00Z",
+    "url": "https://jira.honeywell.com/browse/DEVOPS-333",
+    "description": "Request to provision an Azure Load Balancer module for ingress traffic management in staging. Target service repo is pss_fabric_app_iac_sample. Environment: staging. SKU: Standard, frontend_ip_name: ingress-public-ip, allocation_method: Static."
+  }
+}

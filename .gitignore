@@ -1,0 +1,17 @@
+venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+
+# Materialisation cache -- always re-fetchable from Git (ADR 0020/0021)
+.cache/
+
+# Generated artifacts. Runs write here, never into src/.
+output/
+
+.pytest_cache/
+.databricks/
+.vscode/
+.idea/

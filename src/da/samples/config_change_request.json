@@ -1,0 +1,6 @@
+{
+  "configuration_change":"max",
+  "service": "cf-app-registration",
+  "environment": "dev",
+  "target_value": "12"
+}

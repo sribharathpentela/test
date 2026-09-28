@@ -1,0 +1,20 @@
+{
+  "jira": {
+    "issue_type": "Task",
+    "key": "DEVOPS-111",
+    "summary": "Provision PostgreSQL Flexible Server in DEV",
+    "status": "In Progress",
+    "priority": "High",
+    "reporter": "Reporter-111",
+    "assignee": "Unassigned",
+    "labels": [
+      "devops",
+      "iac",
+      "database"
+    ],
+    "created": "2026-09-04T10:00:00Z",
+    "updated": "2026-09-04T10:00:00Z",
+    "url": "https://jira.honeywell.com/browse/DEVOPS-111",
+    "description": "Please provision a new PostgreSQL Flexible Server database. Target service repo is pss_fabric_app_iac_sample Environment: dev. Server SKU should be GP_Standard_D2s_v3, postgres_version: 13, storage_mb: 32768, administrator_login: pgadmin."
+  }
+}

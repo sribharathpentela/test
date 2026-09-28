@@ -1,0 +1,894 @@
+{
+  "instructions_for_agent": "When a user requests a config change: 1) Find the matching entry below by 'request' name. 2) Ask the user for everything listed in 'human_must_provide' if not already given. 3) Look up or discover everything listed in 'agent_must_identify' from the repository or live environment. 4) Run every item in 'pre_checks' before making the change. 5) When 'target_fields' is present, use only the specified file and exact YAML field paths for reading and mutation. 6) Do not use LLM-based discovery to select the mutation target when 'target_fields' is present. 7) If any pre-check fails, log that item to gap_register.json and skip only that item.",
+  "environment_clusters": {
+    "dev": "aks-catalyst-dev-eastus-001"
+  },
+  "config_changes": [
+    {
+      "id": 1,
+      "request": "Replica count change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired replica value",
+        "Which field: minReplicas, maxReplicas, or both"
+      ],
+      "pre_checks": [
+        "No-op check (current vs desired value)",
+        "Integer/range valid",
+        "min <= max"
+      ],
+      "target_fields": [
+        {
+          "file": "hpa-v1.yaml",
+          "in": "base",
+          "fields": {
+            "minReplicas": [
+              "spec",
+              "minReplicas"
+            ],
+            "maxReplicas": [
+              "spec",
+              "maxReplicas"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "request": "CPU request/limit change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired CPU value",
+        "Request or limit"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Valid Kubernetes CPU quantity",
+        "CPU request <= CPU limit",
+        "Target exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "deployment-v1.yaml",
+          "in": "base",
+          "fields": {
+            "cpu_request": [
+              "spec",
+              "template",
+              "spec",
+              "containers",
+              0,
+              "resources",
+              "requests",
+              "cpu"
+            ],
+            "cpu_limit": [
+              "spec",
+              "template",
+              "spec",
+              "containers",
+              0,
+              "resources",
+              "limits",
+              "cpu"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "request": "Memory request/limit change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired memory value",
+        "Request or limit"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Valid Kubernetes memory quantity",
+        "Memory request <= memory limit",
+        "Target exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "deployment-v1.yaml",
+          "in": "base",
+          "fields": {
+            "memory_request": [
+              "spec",
+              "template",
+              "spec",
+              "containers",
+              0,
+              "resources",
+              "requests",
+              "memory"
+            ],
+            "memory_limit": [
+              "spec",
+              "template",
+              "spec",
+              "containers",
+              0,
+              "resources",
+              "limits",
+              "memory"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "request": "CPU target utilization change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired CPU target utilization value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Valid CPU utilization percentage (0-100)",
+        "Target exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "hpa-v1.yaml",
+          "in": "base",
+          "fields": {
+            "cpu_target_utilization": [
+              "spec",
+              "metrics",
+              0,
+              "resource",
+              "target",
+              "averageUtilization"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "request": "Memory target utilization change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired memory target utilization value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Valid memory utilization percentage (0-100)",
+        "Target exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "hpa-v1.yaml",
+          "in": "base",
+          "fields": {
+            "memory_target_utilization": [
+              "spec",
+              "metrics",
+              1,
+              "resource",
+              "target",
+              "averageUtilization"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "request": "Rolling update strategy change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired rolling update setting",
+        "Which field: maxSurge, maxUnavailable, or both"
+      ],
+      "pre_checks": [
+        "Target exists in the repo (base or overlay)",
+        "No-op check",
+        "maxSurge value is a valid percentage or integer",
+        "maxUnavailable value is a valid percentage or integer",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "deployment-v1.yaml",
+          "in": "base",
+          "fields": {
+            "maxSurge": [
+              "spec",
+              "strategy",
+              "rollingUpdate",
+              "maxSurge"
+            ],
+            "maxUnavailable": [
+              "spec",
+              "strategy",
+              "rollingUpdate",
+              "maxUnavailable"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "request": "Container port change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired container port"
+      ],
+      "pre_checks": [
+        "Port is within valid range 1-65535",
+        "Target exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "deployment-v1.yaml",
+          "in": "base",
+          "fields": {
+            "containerPort": [
+              "spec",
+              "template",
+              "spec",
+              "containers",
+              0,
+              "ports",
+              0,
+              "containerPort"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "request": "Minimum availability change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired minimum availability value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer or percentage",
+        "Target PDB exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "pdb.yaml",
+          "in": "base",
+          "fields": {
+            "minAvailable": [
+              "spec",
+              "minAvailable"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "request": "Service port change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired service port"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Port is within valid range 1-65535",
+        "Target Service exists in the repo (base or overlay)",
+        "If the Service has multiple ports, the intended Service port must be explicitly identified",
+        "Base vs overlay checked",
+        "For the selected Service port, resolve all matching VirtualService routes in the environment ingress configuration",
+        "Current Service port must match the corresponding VirtualService destination port before applying the change",
+        "If the Service port and VirtualService destination port are already inconsistent, stop for review and do not automatically correct the existing mismatch"
+      ],
+      "target_fields": [
+        {
+          "file": "service.yaml",
+          "in": "base",
+          "fields": {
+            "service_port": [
+              "spec",
+              "ports",
+              "<selected_index>",
+              "port"
+            ]
+          }
+        },
+        {
+          "file": "cf-frontend-core-ingress-public.yaml",
+          "in": "clusters/<cluster>/<environment>-ingress",
+          "kind": "VirtualService",
+          "fields": {
+            "destination_service_port": [
+              "spec",
+              "http",
+              "<matching_route_index>",
+              "route",
+              "<matching_destination_index>",
+              "destination",
+              "port",
+              "number"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "request": "Target port change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired target port"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Port is within valid range 1-65535",
+        "Target Service exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "service.yaml",
+          "in": "base",
+          "fields": {
+            "target_port": [
+              "spec",
+              "ports",
+              "<selected_index>",
+              "targetPort"
+            ]
+          }
+        },
+        {
+          "file": "envoy-filter.yaml",
+          "in": "base",
+          "fields": {
+            "target_port": [
+              "spec",
+              "configPatches",
+              0,
+              "match",
+              "listener",
+              "portNumber"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "request": "Storage capacity change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired storage capacity"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Valid Kubernetes storage quantity",
+        "Target PersistentVolume and PersistentVolumeClaim exist in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "persistent-volume.yaml",
+          "in": "base",
+          "fields": {
+            "storage_capacity": [
+              "spec",
+              "capacity",
+              "storage"
+            ]
+          }
+        },
+        {
+          "file": "persistent-volume-claim.yaml",
+          "in": "base",
+          "fields": {
+            "storage_capacity": [
+              "spec",
+              "resources",
+              "requests",
+              "storage"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "request": "Initial stream window size change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired initial stream window size"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Target EnvoyFilter exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "envoyfilter-http2-options.yaml",
+          "in": "base",
+          "fields": {
+            "initial_stream_window_size": [
+              "spec",
+              "configPatches",
+              0,
+              "patch",
+              "value",
+              "typed_config",
+              "http2_protocol_options",
+              "initial_stream_window_size"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "request": "Initial connection window size change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired initial connection window size"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Target EnvoyFilter exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "envoyfilter-http2-options.yaml",
+          "in": "base",
+          "fields": {
+            "initial_connection_window_size": [
+              "spec",
+              "configPatches",
+              0,
+              "patch",
+              "value",
+              "typed_config",
+              "http2_protocol_options",
+              "initial_connection_window_size"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "request": "CPU minimum allowed change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired CPU minimum allowed value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Valid Kubernetes CPU quantity",
+        "Target VPA exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "vpa-v1.yaml",
+          "in": "base",
+          "fields": {
+            "cpu_min_allowed": [
+              "spec",
+              "resourcePolicy",
+              "containerPolicies",
+              0,
+              "minAllowed",
+              "cpu"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "request": "CPU maximum allowed change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired CPU maximum allowed value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Valid Kubernetes CPU quantity",
+        "Target VPA exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "vpa-v1.yaml",
+          "in": "base",
+          "fields": {
+            "cpu_max_allowed": [
+              "spec",
+              "resourcePolicy",
+              "containerPolicies",
+              0,
+              "maxAllowed",
+              "cpu"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "request": "Memory minimum allowed change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired memory minimum allowed value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Valid Kubernetes memory quantity",
+        "Target VPA exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "vpa-v1.yaml",
+          "in": "base",
+          "fields": {
+            "memory_min_allowed": [
+              "spec",
+              "resourcePolicy",
+              "containerPolicies",
+              0,
+              "minAllowed",
+              "memory"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "request": "Memory maximum allowed change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired memory maximum allowed value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Valid Kubernetes memory quantity",
+        "Target VPA exists in the repo (base or overlay)",
+        "Base vs overlay checked"
+      ],
+      "target_fields": [
+        {
+          "file": "vpa-v1.yaml",
+          "in": "base",
+          "fields": {
+            "memory_max_allowed": [
+              "spec",
+              "resourcePolicy",
+              "containerPolicies",
+              0,
+              "maxAllowed",
+              "memory"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "request": "Minimum prediction interval change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired minimum prediction interval value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "minimum_prediction_interval": [
+              "Scheduling",
+              "MinimumPredictionIntervalMinutes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "request": "Minimum training interval change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired minimum training interval value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "minimum_training_interval": [
+              "Scheduling",
+              "MinimumTrainingIntervalMinutes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "request": "Immediate job buffer change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired immediate job buffer value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "immediate_job_buffer": [
+              "Scheduling",
+              "ImmediateJobBufferMinutes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "request": "Maximum page size change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired maximum page size value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "max_page_size": [
+              "Registry",
+              "MaxPageSize"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "request": "Redis connect timeout change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired Redis connect timeout value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "redis_connect_timeout": [
+              "Redis",
+              "ConnectTimeout"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "request": "Redis sync timeout change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired Redis sync timeout value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "redis_sync_timeout": [
+              "Redis",
+              "SyncTimeout"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "request": "Session cache duration change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired session cache duration value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "session_cache_duration_days": [
+              "SessionCacheDurationDays"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "request": "Subscription featured cache duration change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired cache duration value",
+        "Which cache duration: SubscriptionFeaturedCache or TenantSubscriptionSyncCache"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "subscription_featured_cache_duration": [
+              "SubscriptionFeaturedCache",
+              "CacheDurationMinutes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "request": "Tenant subscription sync cache duration change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired cache duration value",
+        "Which cache duration: SubscriptionFeaturedCache or TenantSubscriptionSyncCache"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "tenant_subscription_sync_cache_duration": [
+              "TenantSubscriptionSyncCache",
+              "CacheDurationMinutes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "request": "Cache expiration duration change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired expiration duration value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "cache_expiration_in_minutes": [
+              "CacheSettings",
+              "ExpirationInMinutes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "request": "Cache timeout change",
+      "human_must_provide": [
+        "Service",
+        "Environment",
+        "Desired timeout value"
+      ],
+      "pre_checks": [
+        "No-op check",
+        "Value is a valid integer",
+        "Target appsettings.json exists in the environment"
+      ],
+      "target_fields": [
+        {
+          "file": "appsettings.json",
+          "in": "environment",
+          "fields": {
+            "cache_timeout_in_ms": [
+              "CacheSettings",
+              "TimeOutInMS"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

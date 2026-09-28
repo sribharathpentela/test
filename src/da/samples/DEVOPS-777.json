@@ -1,0 +1,20 @@
+{
+    "jira": {
+        "issue_type": "Task",
+        "key": "DEVOPS-777",
+        "summary": "Provision Managed Redis cluster in QA for subscription service",
+        "status": "Open",
+        "priority": "High",
+        "reporter": "Reporter-777",
+        "assignee": "Unassigned",
+        "labels": [
+            "devops",
+            "iac",
+            "redis"
+        ],
+        "created": "2026-09-08T10:00:00Z",
+        "updated": "2026-09-08T10:00:00Z",
+        "url": "https://jira.honeywell.com/browse/DEVOPS-777",
+        "description": "Request to provision Managed Redis in QA environment. Target service repo is pss_fabric_app_iac_sample. Resource prefix: subscription-redis. SKU: Balanced_B3, High Availability: true."
+    }
+}
